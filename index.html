@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Multistep formulier</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+	<form>
+		<h1>Aanmelden</h1>
+
+
+		<div class="tab">Stap 1
+
+			<p><input placeholder="Voornaam" oninput="this.className = 'test'" name="fname"></p>
+
+			<p><input placeholder="Achternaam" oninput="this.className = 'test'" name="lname"></p>
+
+		</div>
+
+
+		<div class="tab">Stap 2
+
+			<p><input placeholder="Email" name="mail"></p>
+
+			<p><input placeholder="Telefoonnummer" name="nummer"></p>
+
+		</div>
+
+	</form>
+
+	<script src="form.js"></script>
+
+</body>
+</html>
