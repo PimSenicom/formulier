@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<form>
+	<form id="multistepForm">
 		<h1>Aanmelden</h1>
 
 
@@ -29,6 +29,23 @@
 			<p><input placeholder="Telefoonnummer" name="nummer"></p>
 
 		</div>
+
+		<!-- Vorige en volgende knop -->
+		<div style="overflow:auto;">
+
+    		<div>
+
+     			<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+
+      			<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+
+    		</div>
+  		</div>
+
+  		<div style="text-align:center;margin-top:40px;">
+   			<span class="step"></span>
+    		<span class="step"></span>
+  		</div>
 
 	</form>
 
