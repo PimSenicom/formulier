@@ -16,9 +16,9 @@
 </head>
 <body>
 
-	<form id="multistepForm" action="data.php" method="post">
+	<form id="multistepForm" action="data.html" method="get">
 
-		<div class="testFirebase" onclick="nieuweGebruiker()">knop</div>
+		<div class="testFirebase">knop</div>
 
 
 		<h1>Aanmelden</h1>
@@ -27,10 +27,10 @@
 		<div class="tab">
 
 			Voornaam:
-			<p><input placeholder="" oninput="this.className = 'test'" name="fname"></p>
+			<p><input placeholder="" oninput="this.className = 'test'" name="fname" id="voornaam"></p>
 
 			Achternaam:
-			<p><input placeholder="" oninput="this.className = 'test'" name="lname"></p>
+			<p><input placeholder="" oninput="this.className = 'test'" name="lname" id="achternaam"></p>
 
 		</div>
 
@@ -38,10 +38,10 @@
 		<div class="tab">
 
 			Email:
-			<p><input placeholder="" name="mail"></p>
+			<p><input placeholder="" name="mail" id="email"></p>
 
 			Telefoonnummer:
-			<p><input placeholder="" name="nummer"></p>
+			<p><input placeholder="" name="nummer" id="telefoonnummer"></p>
 
 		</div>
 

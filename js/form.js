@@ -1,6 +1,11 @@
 var tabblad = 0;
 openTabblad(tabblad);
 
+var voornaam3;
+var achternaam3;
+var email3;
+var telefoonnummer3;
+
 function openTabblad(n) {
 
 	var x = document.getElementsByClassName("tab");
@@ -40,7 +45,12 @@ function nextPrev(n) {
   // if you have reached the end of the form...
   if (tabblad >= x.length) {
     // ... the form gets submitted:
-    document.getElementById("multistepForm").submit();
+    // document.getElementById("multistepForm").submit();
+    voornaam3 = document.getElementById('voornaam').value;
+    achternaam3 = document.getElementById('achternaam').value;
+    email3 = document.getElementById('email').value;
+    telefoonnummer3 = document.getElementById('telefoonnummer').value;
+    nieuweGebruiker(voornaam3, achternaam3, email3, telefoonnummer3);
     return false;
   }
   // Otherwise, display the correct tab:

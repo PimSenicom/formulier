@@ -2,16 +2,26 @@
 
 var db = firebase.firestore();
 
-function nieuweGebruiker() {
+
+var voornaam = document.getElementById("voornaam").value;
+
+console.log(voornaam);
+
+
+function nieuweGebruiker(voornaam, achternaam, email, telefoonnummer) {
 
 	db.collection("users").add({
-    first: "Ada",
-    last: "Lovelace2",
-    born: 1815
+    fname: voornaam,
+    lname: achternaam,
+    email: email,
+   	number: telefoonnummer
 		})
 
 	.then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
+
+    // redirect to 'bedanktpagina'
+    window.location.href = 'succes.html'
 	})
 
 	.catch(function(error) {
