@@ -11,37 +11,66 @@
 	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
+	<div class="form-box">
+
+	<h1 class="koptekst">Word lid!</h1>
+
+	<p class="subtekst">Vul de onderstaande velden in en start met<br> besparen voor slechts &euro;2,49 p/m!</p>
+
+
 	<form id="multistepForm" action="data.html" method="get">
-
-		<div class="testFirebase">knop</div>
-
-
-		<h1>Aanmelden</h1>
 
 
 		<div class="tab">
 
-			Voornaam:
-			<p><input placeholder="" oninput="this.className = 'test'" name="fname" id="voornaam"></p>
+			<p>Aanhef:</p>
+			<p><input name="" id="aanhef"></p>
 
-			Achternaam:
-			<p><input placeholder="" oninput="this.className = 'test'" name="lname" id="achternaam"></p>
+			<p>Voornaam:</p>
+			<p><input oninput="this.className = 'test'" name="fname" id="voornaam"></p>
 
+			<p>Achternaam:</p>
+			<p><input oninput="this.className = 'test'" name="lname" id="achternaam"></p>
+
+		</div>
+
+		<div class="tab">
+
+			<p>Geboortedag:</p>
+			<p><input  name="" id="geboortedag"></p>
+
+			<p>Geboortemaand:</p>
+			<p><input  name="" id="geboortemaand"></p>
+
+			<p>Geboortejaar:</p>
+			<p><input  name="" id="geboortejaar"></p>
+			
 		</div>
 
 
 		<div class="tab">
 
-			Email:
+			<p>Email:</p>
 			<p><input placeholder="" name="mail" id="email"></p>
 
-			Telefoonnummer:
+			<p>Telefoonnummer:</p>
 			<p><input placeholder="" name="nummer" id="telefoonnummer"></p>
+
+		</div>
+
+		<div class="tab">
+
+			<p>Postcode:</p>
+			<p><input placeholder="" name="mail" id="postcode"></p>
+
+			<p>Huisnummer:</p>
+			<p><input placeholder="" name="nummer" id="huisnummer"></p>
 
 		</div>
 
@@ -60,9 +89,13 @@
   		<div style="text-align:center;margin-top:40px;">
    			<span class="step"></span>
     		<span class="step"></span>
+    		<span class="step"></span>
+    		<span class="step"></span>
   		</div>
 
 	</form>
+
+	</div>
 
 
 		

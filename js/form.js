@@ -1,10 +1,6 @@
 var tabblad = 0;
 openTabblad(tabblad);
 
-var voornaam3;
-var achternaam3;
-var email3;
-var telefoonnummer3;
 
 function openTabblad(n) {
 
@@ -44,17 +40,34 @@ function nextPrev(n) {
 
   // if you have reached the end of the form...
   if (tabblad >= x.length) {
-    // ... the form gets submitted:
-    // document.getElementById("multistepForm").submit();
-    voornaam3 = document.getElementById('voornaam').value;
-    achternaam3 = document.getElementById('achternaam').value;
-    email3 = document.getElementById('email').value;
-    telefoonnummer3 = document.getElementById('telefoonnummer').value;
-    nieuweGebruiker(voornaam3, achternaam3, email3, telefoonnummer3);
+
+
+    // Data uit formulier opslaan in variabelen
+
+    var voornaam = document.getElementById('voornaam').value;
+    var achternaam = document.getElementById('achternaam').value;
+    var email = document.getElementById('email').value;
+    var aanhef = document.getElementById('aanhef').value;
+    var regDate = Date.now();
+    // var straat = document.getElementById('straat').value;
+    var huisnummer = document.getElementById('huisnummer').value;
+    // var toevoeging = document.getElementById('toevoeging').value;
+    var postcode = document.getElementById('postcode').value;
+    // var plaats = document.getElementById('plaats').value;
+    var land = 'NL';
+    var telefoonnummer = document.getElementById('telefoonnummer').value;
+    // var geboortedatum = document.getElementById('geboortedatum').value;
+    var prijs = '29,95';
+    var recruitmentChannel = 'FB';
+
+    // Nieuwe gebruiker toevoegen
+    nieuweGebruiker(voornaam, achternaam, email, aanhef, regDate, huisnummer, postcode, land, telefoonnummer, prijs, recruitmentChannel)
     return false;
   }
-  // Otherwise, display the correct tab:
+
+  // Anders het volgende tabblad openen
   openTabblad(tabblad);
+
 }
 
 function validateForm() {

@@ -1,22 +1,41 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   background-color: #f1f1f1;
 }
 
-#regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  font-family: Raleway;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
+p {
+  font-size: 20px;
 }
 
-h1 {
-  text-align: center;  
+.form-box {
+  width: 500px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 13px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+
+.koptekst {
+  text-align: left;
+  margin: 0;
+}
+
+.subtekst {
+  margin: 0;
+}
+
+#multistepForm {
+  margin-top: 30px;
 }
 
 input {
@@ -25,11 +44,19 @@ input {
   font-size: 17px;
   font-family: Raleway;
   border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  font-size: 20px;
 }
 
 /* Mark input boxes that gets an error on validation: */
 input.invalid {
   background-color: #ffdddd;
+}
+
+input:focus {
+  box-shadow: 0 0 0 2pt #445bdb;
+  outline: none;
 }
 
 /* Hide all steps by default: */
@@ -76,11 +103,7 @@ button:hover {
   background-color: #4CAF50;
 }
 
-.testFirebase {
-  width: 200px;
-  height: 200px;
-  background-color: green;
-  color: white;
-  text-align: center;
-  line-height: 200px;
-}
+
+
+
+

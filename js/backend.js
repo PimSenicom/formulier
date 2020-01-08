@@ -1,7 +1,7 @@
 var db = firebase.firestore();
 
 
-// Specefieke gebruiker ophalen
+///////////////////// Specefieke gebruiker ophalen //////////////////////////
 
 // db.collection("users").doc("NAaEhpMRaL9E1znwcn2o")
 //     .onSnapshot(function(doc) {
@@ -14,7 +14,7 @@ var db = firebase.firestore();
 
 
 
-// Alle gebruikers ophalen
+/////////////////////////////// Alle gebruikers ophalen ///////////////////////// BRON: https://www.youtube.com/watch?v=kmTECF0JZyQ&t
 
 db.collection("users").get().then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
@@ -23,16 +23,40 @@ db.collection("users").get().then(function(querySnapshot) {
     });
 });
 
+const userlist = document.querySelector('#user-list');
+
+function renderUsers(doc){
+
+    let tr = document.createElement('tr');
+    let voornaam = document.createElement('td');
+    let achternaam = document.createElement('td');
+    let email = document.createElement('td');
+    let nummer = document.createElement('td');
+
+    tr.setAttribute('data-id', doc.id);
+    voornaam.textContent = doc.data().fname;
+    achternaam.textContent = doc.data().lname;
+    email.textContent = doc.data().email;
+    nummer.textContent = doc.data().number;
+
+    tr.appendChild(voornaam);
+    tr.appendChild(achternaam);
+    tr.appendChild(email);
+    tr.appendChild(nummer);
+
+    userlist.appendChild(tr);
+
+}
+
 
 db.collection("users").get().then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
         // doc.data() is never undefined for query doc snapshots 
-        document.write(doc.data().fname);
-        document.write(doc.data().lname);
-        document.write(doc.data().email);
-        document.write(doc.data().number);
+        // var info = doc.data();
 
-        document.createElement();
+        // document.getElementById("kolom").innerHTML = info.fname + " " + info.lname;
+
+        renderUsers(doc);
 
     });
 });
@@ -41,7 +65,7 @@ db.collection("users").get().then(function(querySnapshot) {
 
 
 
-// Wanneer de gebruikers gefilterd moeten worden
+//////////// Wanneer de gebruikers gefilterd moeten worden //////////////////////
 
 // db.collection("users").where("fname", "==", "Jan")
 //     .get()

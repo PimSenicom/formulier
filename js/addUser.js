@@ -3,18 +3,25 @@
 var db = firebase.firestore();
 
 
-var voornaam = document.getElementById("voornaam").value;
-
-console.log(voornaam);
-
-
-function nieuweGebruiker(voornaam, achternaam, email, telefoonnummer) {
+function nieuweGebruiker(voornaam, achternaam, email, aanhef, regDate, huisnummer, postcode, land, telefoonnummer, prijs, recruitmentChannel) {
 
 	db.collection("users").add({
-    fname: voornaam,
-    lname: achternaam,
-    email: email,
-   	number: telefoonnummer
+
+    FirstName: voornaam,
+    LastName: achternaam,
+    Email: email,
+    Gender: aanhef,
+    RegistrationDate: regDate,
+    // StreetAddress: straat,
+    HouseNumber: huisnummer,
+    // HouseNumberAddition: toevoeging,
+    PostalCode: postcode,
+    // City: plaats,
+    Country: land,
+    PhoneNumber: telefoonnummer,
+    // DateOfBirth: geboortedatum,
+    Price: prijs,
+    RecruitmentChannel: recruitmentChannel,
 		})
 
 	.then(function(docRef) {
