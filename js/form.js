@@ -8,14 +8,14 @@ function openTabblad(n) {
 	x[n].style.display = "block";
 
 	if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("prevBtn").style.visibility = "hidden";
   } else {
-    document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("prevBtn").style.visibility = "visible";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("nextBtn").innerHTML = "Versturen";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    document.getElementById("nextBtn").innerHTML = "Volgende";
   }
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
@@ -74,7 +74,9 @@ function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
   x = document.getElementsByClassName("tab");
-  y = x[tabblad].getElementsByTagName("input");
+  // y = x[tabblad].getElementsByTagName("input");
+
+  y = x[tabblad].querySelectorAll('input, select');
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...

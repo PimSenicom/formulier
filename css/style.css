@@ -8,7 +8,13 @@ body {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
+  margin: 0px;
+}
+
+hr {
+  opacity: 0.6;
+  margin-top: 30px;
 }
 
 .form-box {
@@ -18,10 +24,17 @@ p {
   margin-right: auto;
   background-color: white;
   border-radius: 13px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 30px;
   padding-bottom: 40px;
+}
+
+.regel {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -47,6 +60,7 @@ input {
   border-radius: 8px;
   background-color: #f7f7f7;
   font-size: 20px;
+  margin-top: 10px;
 }
 
 /* Mark input boxes that gets an error on validation: */
@@ -59,27 +73,69 @@ input:focus {
   outline: none;
 }
 
+select {
+  height: 45px;
+  width: 150px;
+  border-radius: 20px !important;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2pt #445bdb;
+}
+
+select.invalid {
+  background-color: #ffdddd;
+}
+
 /* Hide all steps by default: */
 .tab {
   display: none;
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #62cc70;
   color: #ffffff;
   border: none;
-  padding: 10px 20px;
+  padding: 15px 15px 15px 15px;
   font-size: 17px;
-  font-family: Raleway;
   cursor: pointer;
+  border-radius: 8px;
+  border-bottom: solid 3px #2d9d58;
 }
 
 button:hover {
   opacity: 0.8;
 }
 
+button:focus {
+  outline: none;
+}
+
+.next-box {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nextBtn {
+  width: 100%;
+}
+
+.prev-box {
+  margin-top: 15px;
+  text-align: center;
+}
+
 #prevBtn {
-  background-color: #bbbbbb;
+  color: #707070;
+}
+
+#prevBtn:hover {
+  color: #445bdb;
+  cursor: pointer;
 }
 
 /* Make circles that indicate the steps of the form: */
@@ -103,7 +159,41 @@ button:hover {
   background-color: #4CAF50;
 }
 
+#voornaam {
+  width: 230px;
+}
 
+#achternaam {
+  width: 400px;
+}
+
+#geboortedag {
+  width: 120px;
+}
+
+#geboortemaand {
+  width: 120px;
+}
+
+#geboortejaar {
+  width: 120px;
+}
+
+#email {
+  width: 400px;
+}
+
+#telefoonnummer {
+  width: 400px;
+}
+
+#postcode {
+  width: 200px;
+}
+
+#huisnummer {
+  width: 150px;
+}
 
 
 

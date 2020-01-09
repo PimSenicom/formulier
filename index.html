@@ -12,7 +12,7 @@
 	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -23,75 +23,179 @@
 
 	<p class="subtekst">Vul de onderstaande velden in en start met<br> besparen voor slechts &euro;2,49 p/m!</p>
 
+	<hr>
 
 	<form id="multistepForm" action="data.html" method="get">
 
 
 		<div class="tab">
 
-			<p>Aanhef:</p>
-			<p><input name="" id="aanhef"></p>
+			<div class="regel">
 
-			<p>Voornaam:</p>
-			<p><input oninput="this.className = 'test'" name="fname" id="voornaam"></p>
+				<div>
+				<p>Aanhef:</p>
 
-			<p>Achternaam:</p>
-			<p><input oninput="this.className = 'test'" name="lname" id="achternaam"></p>
+				<select oninput="this.className = ''" id="aanhef">
+					<option value="" disabled selected >Maak een keuze</option>
+					<option value="Meneer">Meneer</option>
+					<option value="Mevrouw">Mevrouw</option>
+				</select>
+
+				</div>
+
+				<div>
+				
+				<p>Voornaam:</p>
+				<p><input oninput="this.className = ''" name="fname" id="voornaam"></p>
+
+				</div>
+
+			</div>
+
+			<div class="regel">
+
+				<div>
+
+				<p>Achternaam:</p>
+				<p><input oninput="this.className = ''" name="lname" id="achternaam"></p>
+
+				</div>
+
+			</div>
+
 
 		</div>
 
 		<div class="tab">
 
-			<p>Geboortedag:</p>
-			<p><input  name="" id="geboortedag"></p>
+			<div class="regel">
 
-			<p>Geboortemaand:</p>
-			<p><input  name="" id="geboortemaand"></p>
+				<div>
 
-			<p>Geboortejaar:</p>
-			<p><input  name="" id="geboortejaar"></p>
+					<p>Dag:</p>
+					<select  oninput="this.className = ''" name="" id="geboortedag">
+						<option value="" disabled selected >-</option>
+						<option value="01">1</option>
+					</select>
+
+				</div>
+
+				<div>
+
+					<p>Maand:</p>
+					<select  oninput="this.className = ''" name="" id="geboortemaand">
+						<option value="" disabled selected >-</option>
+						<option value="01">januari</option>
+						<option value="02">februari</option>
+						<option value="03">maart</option>
+						<option value="04">april</option>
+						<option value="05">mei</option>
+						<option value="06">juni</option>
+						<option value="07">juli</option>
+						<option value="08">augustus</option>
+						<option value="09">september</option>
+						<option value="10">oktober</option>
+						<option value="11">november</option>
+						<option value="12">december</option>
+					</select>
+
+				</div>
+
+				<div>
+
+					<p>Jaar:</p>
+					<select  oninput="this.className = ''" name="" id="geboortejaar">
+						<option value="" disabled selected >-</option>
+						<option value="1971">1971</option>
+						<option value="1970">1970</option>
+						<option value="1969">1969</option>
+						<option value="1968">1968</option>
+						<option value="1967">1967</option>
+						<option value="1966">1966</option>
+						<option value="1965">1965</option>
+						<option value="1964">1964</option>
+					</select>
+
+				</div>
+
+			</div>
 			
 		</div>
 
 
 		<div class="tab">
 
-			<p>Email:</p>
-			<p><input placeholder="" name="mail" id="email"></p>
+			<div class="regel">
 
-			<p>Telefoonnummer:</p>
-			<p><input placeholder="" name="nummer" id="telefoonnummer"></p>
+				<div>
+
+					<p>Email:</p>
+					<p><input oninput="this.className = ''" name="" id="email"></p>
+
+				</div>
+
+			</div>
+
+			<div class="regel">
+
+				<div>
+
+					<p>Telefoonnummer:</p>
+					<p><input oninput="this.className = ''" name="" id="telefoonnummer"></p>
+
+				</div>
+
+			</div>
 
 		</div>
 
 		<div class="tab">
 
-			<p>Postcode:</p>
-			<p><input placeholder="" name="mail" id="postcode"></p>
+			<div class="regel">
 
-			<p>Huisnummer:</p>
-			<p><input placeholder="" name="nummer" id="huisnummer"></p>
+				<div>
+
+					<p>Postcode:</p>
+					<p><input oninput="this.className = ''" name="" id="postcode"></p>
+
+				</div>
+
+				<div>
+
+					<p>Huisnummer:</p>
+					<p><input oninput="this.className = ''" name="" id="huisnummer"></p>
+
+				</div>
+
+			</div>
 
 		</div>
 
-		<!-- Vorige en volgende knop -->
-		<div style="overflow:auto;">
-
-    		<div>
-
-     			<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-
-      			<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-
-    		</div>
-  		</div>
-
-  		<div style="text-align:center;margin-top:40px;">
+		<!-- Statusbolletjes -->
+		<div style="text-align:center;margin-top:20px;margin-bottom:20px;">
    			<span class="step"></span>
     		<span class="step"></span>
     		<span class="step"></span>
     		<span class="step"></span>
   		</div>
+
+		<!-- Vorige en volgende knop -->
+		<div style="overflow:auto">
+
+    		<div class="next-box">
+
+    			<button type="button" id="nextBtn" onclick="nextPrev(1)">Volgende</button>
+      			
+    		</div>
+
+    		<div class="prev-box">
+
+    			<p id="prevBtn" onclick="nextPrev(-1)">< Stap terug</p>
+    			
+    		</div>
+  		</div>
+
+  		
 
 	</form>
 
