@@ -34,10 +34,10 @@ function renderUsers(doc){
     let nummer = document.createElement('td');
 
     tr.setAttribute('data-id', doc.id);
-    voornaam.textContent = doc.data().fname;
-    achternaam.textContent = doc.data().lname;
-    email.textContent = doc.data().email;
-    nummer.textContent = doc.data().number;
+    voornaam.textContent = doc.data().FirstName;
+    achternaam.textContent = doc.data().LastName;
+    email.textContent = doc.data().Email;
+    nummer.textContent = doc.data().PhoneNumber;
 
     tr.appendChild(voornaam);
     tr.appendChild(achternaam);
